@@ -58,43 +58,48 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transitionDelay = `${i * 0.12}s`;
     });
 
-    // --- Contact form handling ---
+    // --- Contact form handling (Formspree) ---
     const form = document.getElementById('contactForm');
+    const submitBtn = form.querySelector('button[type="submit"]');
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const data = new FormData(form);
         const values = Object.fromEntries(data.entries());
 
-        // Basic validation
         if (!values.name || !values.email || !values.category || !values.message) {
             showFormMessage('Bitte füllen Sie alle Pflichtfelder aus.', 'error');
             return;
         }
 
-        // Email validation
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
             showFormMessage('Bitte geben Sie eine gültige E-Mail-Adresse ein.', 'error');
             return;
         }
 
-        // Build mailto fallback
-        const subject = encodeURIComponent(`Anfrage von ${values.name} — ${values.category}`);
-        const body = encodeURIComponent(
-            `Name: ${values.name}\n` +
-            `E-Mail: ${values.email}\n` +
-            `Telefon: ${values.phone || '—'}\n` +
-            `Kategorie: ${values.category}\n` +
-            `Menge: ${values.quantity || '—'}\n` +
-            `Wunschtermin: ${values.deadline || '—'}\n` +
-            `Kontaktweg: ${values.contact_method || '—'}\n\n` +
-            `Nachricht:\n${values.message}`
-        );
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Wird gesendet...';
 
-        window.location.href = `mailto:kontakt@printnetwork.eu?subject=${subject}&body=${body}`;
-        showFormMessage('Vielen Dank! Ihr E-Mail-Programm wird geöffnet.', 'success');
-        form.reset();
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                showFormMessage('Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet. Wir melden uns innerhalb von 24 Stunden.', 'success');
+                form.reset();
+            } else {
+                showFormMessage('Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an kontakt@printnetwork.eu.', 'error');
+            }
+        } catch {
+            showFormMessage('Verbindungsfehler. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an kontakt@printnetwork.eu.', 'error');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Anfrage senden';
+        }
     });
 
     function showFormMessage(text, type) {
