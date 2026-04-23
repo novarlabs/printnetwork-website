@@ -320,14 +320,14 @@ button, input, select, textarea {
 }
 
 .hero .btn--filled {
-    background: var(--white);
-    color: var(--black);
+    background: transparent;
+    color: var(--white);
     border-color: var(--white);
 }
 
 .hero .btn--filled:hover {
-    background: transparent;
-    color: var(--white);
+    background: var(--white);
+    color: var(--black);
 }
 
 .btn--filled {
