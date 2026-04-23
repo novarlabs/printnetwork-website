@@ -103,15 +103,32 @@ button, input, select, textarea {
     justify-content: space-between;
     padding: 0 var(--space-md);
     z-index: 100;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: transparent;
     border-bottom: 1px solid transparent;
-    transition: border-color 0.3s ease;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .header--scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom-color: var(--gray-border);
+}
+
+.header:not(.header--scrolled) .header__logo-img {
+    filter: invert(1);
+}
+
+.header:not(.header--scrolled) .header__link {
+    color: var(--white);
+}
+
+.header:not(.header--scrolled) .header__link::after {
+    background: var(--white);
+}
+
+.header:not(.header--scrolled) .header__burger span {
+    background: var(--white);
 }
 
 .header__logo {
@@ -189,6 +206,8 @@ button, input, select, textarea {
     text-align: center;
     padding: var(--header-height) var(--space-md) var(--space-lg);
     position: relative;
+    background: var(--black);
+    color: var(--white);
 }
 
 .hero__content {
@@ -199,11 +218,15 @@ button, input, select, textarea {
 }
 
 .hero__logo-wrap {
-    width: 280px;
-    height: 280px;
+    width: 360px;
+    height: 360px;
     perspective: 800px;
     animation: logoFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     opacity: 0;
+}
+
+.hero__logo {
+    filter: invert(1);
 }
 
 .hero__logo {
@@ -233,7 +256,7 @@ button, input, select, textarea {
     font-family: var(--font-accent);
     font-style: italic;
     font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-    color: var(--gray-mid);
+    color: rgba(255, 255, 255, 0.6);
     animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
     opacity: 0;
 }
@@ -259,7 +282,7 @@ button, input, select, textarea {
     display: block;
     width: 1px;
     height: 48px;
-    background: var(--black);
+    background: var(--white);
     animation: scrollPulse 2s ease-in-out infinite;
 }
 
@@ -283,6 +306,27 @@ button, input, select, textarea {
 
 .btn--outline:hover {
     background: var(--black);
+    color: var(--white);
+}
+
+.hero .btn--outline {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.hero .btn--outline:hover {
+    background: var(--white);
+    color: var(--black);
+}
+
+.hero .btn--filled {
+    background: var(--white);
+    color: var(--black);
+    border-color: var(--white);
+}
+
+.hero .btn--filled:hover {
+    background: transparent;
     color: var(--white);
 }
 
@@ -922,8 +966,8 @@ button, input, select, textarea {
     }
 
     .hero__logo-wrap {
-        width: 200px;
-        height: 200px;
+        width: 260px;
+        height: 260px;
     }
 
     .form__row--two {
