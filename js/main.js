@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '.about__container, .about__image-wrap, .about__text, ' +
         '.services__label, .services__headline, .card, ' +
         '.divider, ' +
+        '.products__label, .products__headline, .product-card, ' +
         '.contact__header, .form'
     );
 
