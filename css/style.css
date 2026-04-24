@@ -706,6 +706,15 @@ button, input, select, textarea {
     color: rgba(255, 255, 255, 0.7);
 }
 
+.products__note {
+    text-align: center;
+    margin-top: var(--space-lg);
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
 /* --- CONTACT --- */
 .contact {
     padding: var(--space-xl) var(--space-md);
