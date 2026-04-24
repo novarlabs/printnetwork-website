@@ -755,10 +755,9 @@ button, input, select, textarea {
 .products__note {
     text-align: center;
     margin-top: var(--space-lg);
-    font-family: var(--font-accent);
-    font-style: italic;
+    font-family: var(--font-body);
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--white);
 }
 
 /* --- CONTACT --- */
