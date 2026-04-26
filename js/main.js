@@ -129,6 +129,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // --- Product image color switching ---
+    document.querySelectorAll('.color-dot[data-image]').forEach(dot => {
+        dot.addEventListener('click', () => {
+            const card = dot.closest('.product-card');
+            const img = card.querySelector('.product-card__image');
+            if (!img) return;
+
+            card.querySelectorAll('.color-dot').forEach(d => d.classList.remove('color-dot--active'));
+            dot.classList.add('color-dot--active');
+
+            img.style.opacity = '0';
+            setTimeout(() => {
+                img.src = dot.dataset.image;
+                img.alt = card.querySelector('.product-card__title').textContent + ' in ' + dot.title;
+                img.style.opacity = '1';
+            }, 150);
+        });
+    });
+
     // --- Active nav highlight on scroll ---
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.header__link');
