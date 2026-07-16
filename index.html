@@ -33,6 +33,21 @@
         },
         "telephone": "+4915117502557",
         "email": "kontakt@printnetwork.eu",
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "telephone": "+4915117502557",
+                "contactType": "customer service",
+                "availableLanguage": "German"
+            },
+            {
+                "@type": "ContactPoint",
+                "telephone": "+4915227510383",
+                "contactType": "customer service",
+                "contactOption": "https://wa.me/4915227510383",
+                "availableLanguage": "German"
+            }
+        ],
         "areaServed": {
             "@type": "GeoCircle",
             "geoMidpoint": {
@@ -44,6 +59,79 @@
         },
         "serviceType": ["Textildruck", "Siebdruck", "Grafikdesign"],
         "priceRange": "$$"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Wie läuft eine Bestellung bei Print Network ab?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Schreiben Sie uns per Kontaktformular, WhatsApp oder E-Mail. Wir besprechen Ihr Projekt, erstellen ein individuelles Design und senden Ihnen ein Angebot. Nach Freigabe geht Ihr Auftrag in den Druck und wird innerhalb weniger Werktage versendet."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Was kostet der Textildruck?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Die Kosten hängen von Produkt, Druckverfahren, Anzahl der Farben und Bestellmenge ab. Als Richtwert: bedruckte T-Shirts starten ab ca. 15 EUR pro Stück bei mittleren Mengen. Wir erstellen Ihnen gerne ein kostenloses Angebot."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wie lange dauert die Lieferung?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nach Designfreigabe beträgt die Produktionszeit in der Regel 5 bis 10 Werktage. Bei Eilaufträgen sprechen Sie uns einfach an."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Ab welcher Menge kann ich bestellen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Im Siebdruck empfehlen wir eine Mindestmenge von ca. 20 Stück, damit sich die Einrichtungskosten lohnen. Für kleinere Mengen bieten wir alternative Druckverfahren an."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Welche Druckverfahren bietet ihr an?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Aktuell arbeiten wir mit hochwertigem Siebdruck, der besonders langlebige und farbintensive Ergebnisse liefert. Weitere Verfahren wie Transferdruck sind in Planung."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kann ich mein eigenes Design mitbringen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, Sie können Ihr eigenes Design liefern. Wir prüfen es auf Druckfähigkeit und passen es bei Bedarf an. Alternativ erstellt unser Designteam ein komplett individuelles Design für Sie."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Welche Produkte kann ich bedrucken lassen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Unser Standardsortiment umfasst T-Shirts, Hoodies, Zip-Hoodies und Polos in verschiedenen Farben und Größen. Weitere Produkte wie Caps oder Beutel sind auf Anfrage möglich."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Liefert ihr auch außerhalb von Wittlich?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, wir versenden deutschlandweit. Unser Standort ist Wittlich, aber wir beliefern Kunden in ganz Deutschland per Paketversand."
+                }
+            }
+        ]
     }
     </script>
 </head>
@@ -58,6 +146,7 @@
             <a href="#about" class="header__link">Über uns</a>
             <a href="#services" class="header__link">Leistungen</a>
             <a href="#products" class="header__link">Produkte</a>
+            <a href="#faq" class="header__link">FAQ</a>
             <a href="#contact" class="header__link">Kontakt</a>
         </nav>
         <button class="header__burger" id="burger" aria-label="Menü öffnen">
@@ -376,6 +465,72 @@
             </div>
         </section>
 
+        <!-- FAQ -->
+        <section class="faq" id="faq">
+            <div class="faq__container">
+                <p class="faq__label">Häufige Fragen</p>
+                <h2 class="faq__headline">FAQ</h2>
+
+                <div class="faq__list">
+                    <details class="faq__item">
+                        <summary class="faq__question">Wie läuft eine Bestellung bei Print Network ab?</summary>
+                        <div class="faq__answer">
+                            <p>Schreiben Sie uns per Kontaktformular, WhatsApp oder E-Mail. Wir besprechen Ihr Projekt, erstellen ein individuelles Design und senden Ihnen ein Angebot. Nach Freigabe geht Ihr Auftrag in den Druck und wird innerhalb weniger Werktage versendet.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq__item">
+                        <summary class="faq__question">Was kostet der Textildruck?</summary>
+                        <div class="faq__answer">
+                            <p>Die Kosten hängen von Produkt, Druckverfahren, Anzahl der Farben und Bestellmenge ab. Als Richtwert: bedruckte T-Shirts starten ab ca. 15 EUR pro Stück bei mittleren Mengen. Wir erstellen Ihnen gerne ein kostenloses Angebot.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq__item">
+                        <summary class="faq__question">Wie lange dauert die Lieferung?</summary>
+                        <div class="faq__answer">
+                            <p>Nach Designfreigabe beträgt die Produktionszeit in der Regel 5 bis 10 Werktage. Bei Eilaufträgen sprechen Sie uns einfach an.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq__item">
+                        <summary class="faq__question">Ab welcher Menge kann ich bestellen?</summary>
+                        <div class="faq__answer">
+                            <p>Im Siebdruck empfehlen wir eine Mindestmenge von ca. 20 Stück, damit sich die Einrichtungskosten lohnen. Für kleinere Mengen bieten wir alternative Druckverfahren an.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq__item">
+                        <summary class="faq__question">Welche Druckverfahren bietet ihr an?</summary>
+                        <div class="faq__answer">
+                            <p>Aktuell arbeiten wir mit hochwertigem Siebdruck, der besonders langlebige und farbintensive Ergebnisse liefert. Weitere Verfahren wie Transferdruck sind in Planung.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq__item">
+                        <summary class="faq__question">Kann ich mein eigenes Design mitbringen?</summary>
+                        <div class="faq__answer">
+                            <p>Ja, Sie können Ihr eigenes Design liefern. Wir prüfen es auf Druckfähigkeit und passen es bei Bedarf an. Alternativ erstellt unser Designteam ein komplett individuelles Design für Sie.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq__item">
+                        <summary class="faq__question">Welche Produkte kann ich bedrucken lassen?</summary>
+                        <div class="faq__answer">
+                            <p>Unser Standardsortiment umfasst T-Shirts, Hoodies, Zip-Hoodies und Polos in verschiedenen Farben und Größen. Weitere Produkte wie Caps oder Beutel sind auf Anfrage möglich.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq__item">
+                        <summary class="faq__question">Liefert ihr auch außerhalb von Wittlich?</summary>
+                        <div class="faq__answer">
+                            <p>Ja, wir versenden deutschlandweit. Unser Standort ist Wittlich, aber wir beliefern Kunden in ganz Deutschland per Paketversand.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- FOOTER -->
@@ -390,7 +545,7 @@
                     <p>Print Network GbR</p>
                     <p>Schlossberg 7, 54516 Wittlich</p>
                     <p><a href="mailto:kontakt@printnetwork.eu">kontakt@printnetwork.eu</a></p>
-                    <p><a href="https://wa.me/4915117502557">+49 151 17502557</a></p>
+                    <p><a href="tel:+4915117502557">+49 151 17502557</a></p>
                 </div>
                 <div class="footer__social">
                     <a href="https://www.instagram.com/printnetwork.eu/" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram">Instagram</a>
@@ -409,7 +564,7 @@
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/4915117502557?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Textildruck." class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp Chat starten">
+    <a href="https://wa.me/4915227510383?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Textildruck." class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp Chat starten">
         <svg viewBox="0 0 24 24" width="28" height="28" fill="#000000">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
