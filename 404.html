@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seite nicht gefunden — Print Network</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: var(--space-md);
+            background: var(--black);
+            color: var(--white);
+        }
+        .error-page__code {
+            font-family: var(--font-heading);
+            font-size: clamp(5rem, 15vw, 10rem);
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            line-height: 1;
+            margin-bottom: var(--space-sm);
+        }
+        .error-page__text {
+            font-family: var(--font-accent);
+            font-style: italic;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: var(--space-lg);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <a href="index.html" class="header__logo" style="margin-bottom: var(--space-lg);">
+            <img src="assets/logo.png" alt="Print Network Logo" style="height: 48px; filter: invert(1);">
+        </a>
+        <p class="error-page__code">404</p>
+        <p class="error-page__text">Diese Seite existiert leider nicht.</p>
+        <a href="index.html" class="btn btn--outline" style="border-color: var(--white); color: var(--white);">Zur Startseite</a>
+    </div>
+</body>
+</html>
